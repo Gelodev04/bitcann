@@ -1,13 +1,10 @@
-import HomeSearch from "@/components/HomeSearch";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
+import HomeSearch from "@/components/homepage/HomeSearch";
 
 export default function Home() {
   return (
     <>
-    <Navbar/>
       <main className="flex justify-between items-center h-screen w-full ">
-        <HomeSearch/>
+        <HomeSearch />
       </main>
     </>
   );
