@@ -1,6 +1,7 @@
 "use client";
 import { Add } from "@/components/svg/Add";
 import { Check } from "@/components/svg/Check";
+import { Delete } from "@/components/svg/Delete";
 import { Edit } from "@/components/ui/buttons/Edit";
 import Image from "next/image";
 import React from "react";
@@ -66,14 +67,8 @@ export const Records = () => {
             <button className="bg-[#328F3F] p-1 rounded-[5px] absolute right-[3.3rem] cursor-pointer">
                 <Check/>
             </button>
-            <button className="absolute right-[1.5rem] bg-[#555555] p-1 rounded-[5px]">
-                <Image
-                  src="/svg/delete.svg"
-                  alt="delete"
-                  width={14}
-                  height={14}
-                  className="cursor-pointer"
-                />
+            <button className="absolute right-[1.5rem] bg-[#555555] p-1 rounded-[5px] cursor-pointer">
+                <Delete/>
               </button>
           </div>
         ) : (

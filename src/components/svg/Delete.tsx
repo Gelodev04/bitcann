@@ -1,0 +1,42 @@
+import React from "react";
+
+export const Delete = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="14"
+      viewBox="0 0 20 21"
+      fill="none"
+    >
+      <path
+        d="M1.7002 4.73987H3.5202H18.0802"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16.2566 4.73997V17.48C16.2566 17.9627 16.0649 18.4256 15.7235 18.7669C15.3822 19.1082 14.9193 19.3 14.4366 19.3H5.3366C4.85391 19.3 4.39098 19.1082 4.04967 18.7669C3.70835 18.4256 3.5166 17.9627 3.5166 17.48V4.73997M6.2466 4.73997V2.91998C6.2466 2.43728 6.43835 1.97436 6.77967 1.63304C7.12098 1.29172 7.58391 1.09998 8.0666 1.09998H11.7066C12.1893 1.09998 12.6522 1.29172 12.9935 1.63304C13.3349 1.97436 13.5266 2.43728 13.5266 2.91998V4.73997"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.07227 9.28979V14.7498"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M11.708 9.28992V14.7499"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
