@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
-
+@font-face {
+  font-family: "Product Sans";
+  src: url("/fonts/product-sans/ProductSansRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 body {
