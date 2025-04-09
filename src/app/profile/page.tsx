@@ -1,6 +1,7 @@
 // ProfilePage.tsx
 import ProfileDetails from "@/components/profilepage/ProfileDetails";
 import { Timer } from "@/components/Timer";
+import Image from "next/image";
 import React from "react";
 
 export default function ProfilePage() {
@@ -10,7 +11,7 @@ export default function ProfilePage() {
       <div className="flex justify-between items-center w-full mb-[2rem] my-[8rem]">
         <h1 className="text-white font-semibold text-[30px] flex items-center gap-3">
           <span>romit.bch</span>
-          <img className="w-[23px] cursor-pointer" src="/svg/copy.svg" alt="Logo" />
+          <Image className=" cursor-pointer" src="/svg/copy.svg" alt="copy" width={23} height={23}/>
         </h1>
         <Timer />
       </div>

@@ -5,7 +5,7 @@ export default function Navbar() {
     
 
   return (
-    <header className='py-[50px] px-[83px] absolute w-full'>
+    <header className='py-[35px] px-[83px] absolute w-full'>
         <nav className='flex items-center justify-between'> 
             <h1 className='font-[700] text-[40px] logo-gradient cursor-pointer'><Link href="/">Bitcann</Link></h1>
             <ul className='flex items-center text-white font-[400] text-[18px] gap-[5rem]'>
