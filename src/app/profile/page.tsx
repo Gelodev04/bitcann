@@ -1,5 +1,6 @@
 // ProfilePage.tsx
 import ProfileDetails from "@/components/profilepage/ProfileDetails";
+import { Copy } from "@/components/svg/Copy";
 import { Timer } from "@/components/Timer";
 import Image from "next/image";
 import React from "react";
@@ -11,7 +12,9 @@ export default function ProfilePage() {
       <div className="flex justify-between items-center w-full mb-[2rem] my-[8rem]">
         <h1 className="text-white font-semibold text-[30px] flex items-center gap-3">
           <span>romit.bch</span>
-          <Image className=" cursor-pointer" src="/svg/copy.svg" alt="copy" width={23} height={23}/>
+          <button className="cursor-pointer">
+            <Copy/>
+          </button>
         </h1>
         <Timer />
       </div>

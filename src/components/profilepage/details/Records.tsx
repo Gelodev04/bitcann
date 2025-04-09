@@ -1,4 +1,5 @@
 "use client";
+import { Add } from "@/components/svg/Add";
 import { Check } from "@/components/svg/Check";
 import { Edit } from "@/components/ui/buttons/Edit";
 import Image from "next/image";
@@ -78,14 +79,9 @@ export const Records = () => {
         ) : (
           // Show Add New Record button when not editing
           <div className="flex items-center gap-2 px-[5.1rem] py-3 text-white hover:bg-[#333] cursor-pointer">
-            <div className="p-3 rounded-full flex items-center justify-center bg-[#555555]">
-              <Image
-                src="/svg/add.svg"
-                alt="add button"
-                width={10}
-                height={10}
-              />
-            </div>
+            <button className="p-3 rounded-full flex items-center justify-center bg-[#555555]">
+              <Add/>
+            </button>
             <span>Add New Record</span>
           </div>
         )}
