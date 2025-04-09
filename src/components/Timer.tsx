@@ -10,7 +10,7 @@ export const Timer = () => {
 
   return (
     <div className="flex items-center gap-3 text-white  ">
-      <h2 className="">Ending in:</h2>
+      <h2 className="font-semibold">Ending in:</h2>
       {timeUnits.map((unit, index) => (
         <div key={index} className="flex flex-col items-center ">
           <span className="font-bold text-[20px]">{unit.value}</span>

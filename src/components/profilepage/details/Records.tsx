@@ -56,26 +56,24 @@ export const Records = () => {
           <div className="flex items-center gap-2 px-[5.1rem] py-3 text-white">
             <input
               type="text"
-             
               className="w-full bg-[#333333]  rounded-[8px] px-4 py-1 text-white focus:outline-none focus:ring-2 focus:ring-[#27A1FA]"
             />
             <input
               type="text"
-             
               className="w-full bg-[#333333] rounded-[8px] px-4 py-1 text-white focus:outline-none focus:ring-2 focus:ring-[#27A1FA]"
             />
             <button className="bg-[#328F3F] p-1 rounded-[5px] absolute right-[3.3rem] cursor-pointer">
-                <Check/>
+              <Check />
             </button>
             <button className="absolute right-[1.5rem] bg-[#555555] p-1 rounded-[5px] cursor-pointer">
-                <Delete/>
-              </button>
+              <Delete />
+            </button>
           </div>
         ) : (
           // Show Add New Record button when not editing
           <div className="flex items-center gap-2 px-[5.1rem] py-3 text-white hover:bg-[#333] cursor-pointer">
             <button className="p-3 rounded-full flex items-center justify-center bg-[#555555]">
-              <Add/>
+              <Add />
             </button>
             <span>Add New Record</span>
           </div>

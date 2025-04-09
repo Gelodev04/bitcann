@@ -31,7 +31,7 @@ export const Table = () => {
         {tableTitle.map((title, index) => (
           <h1
             key={index}
-            className="text-white text-[17px] font-medium"
+            className="text-white text-[17px] font-[600]"
           >
             {title}
           </h1>
