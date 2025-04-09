@@ -3,9 +3,9 @@ import React from "react";
 export const Timer = () => {
   const timeUnits = [
     { label: "Days", value: "01" },
-    { label: "Hours", value: "01" },
-    { label: "Minutes", value: "01" },
-    { label: "Seconds", value: "01" },
+    { label: "Hours", value: "23" },
+    { label: "Minutes", value: "30" },
+    { label: "Seconds", value: "06" },
   ];
 
   return (
