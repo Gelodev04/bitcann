@@ -4,8 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ConnectWallet } from "./ui/buttons/ConnectWallet";
 import { AccountDropdown } from "./ui/buttons/AccountDropdown";
-import { Cross as Hamburger } from 'hamburger-react'
-
+import { Cross as Hamburger } from "hamburger-react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -22,29 +21,43 @@ export default function Navbar() {
           <li>
             <Link
               href="/auction"
-              className={pathname === "/auction" ? "text-[#888888]" : "hover:text-[#888888] duration-100 ease-out"}
+              className={
+                pathname === "/auction"
+                  ? "text-[#888888]"
+                  : "hover:text-[#888888] duration-100 ease-out"
+              }
             >
               Auctions
             </Link>
           </li>
           <li>
-          <Link 
+            <Link
               href="/profile"
-              className={pathname === '/profile' ? 'text-[#888888]' : 'hover:text-[#888888] duration-100 ease-out'}
+              className={
+                pathname === "/profile"
+                  ? "text-[#888888]"
+                  : "hover:text-[#888888] duration-100 ease-out"
+              }
             >
               Profile
             </Link>
           </li>
-          
-          {isConnected ? <AccountDropdown /> : <ConnectWallet text="Connect Wallet" />}
+
+          {isConnected ? (
+            <AccountDropdown />
+          ) : (
+            <ConnectWallet text="Connect Wallet" />
+          )}
         </ul>
 
         {/* MOBILE MENU */}
 
         <div className="md:hidden">
-          <Hamburger size={30} color="white"/>
+          <Hamburger size={30} color="white" />
         </div>
       </nav>
+
+      <div className="">hello</div>
     </header>
   );
 }
