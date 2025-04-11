@@ -3,7 +3,7 @@ import HomeSearch from "@/components/homepage/HomeSearch";
 export default function Home() {
   return (
     <>
-      <main className="flex justify-between items-center h-screen w-full ">
+      <main className="flex justify-between items-center  w-full h-screen" >
         <HomeSearch />
       </main>
     </>

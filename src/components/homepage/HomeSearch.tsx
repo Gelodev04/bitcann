@@ -6,7 +6,7 @@ import SearchDropdown from "./SearchDropdown";
 export default function HomeSearch() {
   const [isFocused, setIsFocused] = useState(false);
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4">
+    <div className="w-full flex flex-col items-center justify-center px-4 ">
       <div className="relative w-full max-w-[600px] ">
         <input
           onFocus={() => setIsFocused(true)}
