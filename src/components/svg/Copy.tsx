@@ -1,11 +1,11 @@
 import React from "react";
 
-export const Copy = () => {
+export const Copy = ({size = "23"} :{size?: string}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="23"
-      height="23"
+      width={size}
+      height={size}
       viewBox="0 0 30 30"
       fill="none"
     >

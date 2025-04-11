@@ -5,7 +5,7 @@ import { Delete } from "@/components/svg/Delete";
 import { Edit } from "@/components/ui/buttons/Edit";
 import Image from "next/image";
 import React from "react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export const Records = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -20,8 +20,25 @@ export const Records = () => {
     setIsEditing((prev) => !prev);
   };
 
+  const containerRef = useRef<HTMLDivElement>(null);
+
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsEditing(false); 
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="w-full  mx-auto relative">
+    <div className="w-full  mx-auto relative" ref={containerRef}>
       {/* Edit button */}
       <div className="flex justify-end ">
         <Edit onClick={handleEditClick} />
@@ -71,8 +88,8 @@ export const Records = () => {
           </div>
         ) : (
           // Show Add New Record button when not editing
-          <div className="flex items-center gap-2 px-[5.1rem] py-3 text-white hover:bg-[#333] cursor-pointer">
-            <button className="p-3 rounded-full flex items-center justify-center bg-[#555555]">
+          <div onClick={handleEditClick} className="flex items-center gap-2 px-[5.1rem] py-3 text-white hover:bg-[#333] cursor-pointer">
+            <button  className="p-3 rounded-full flex items-center justify-center bg-[#555555]">
               <Add />
             </button>
             <span>Add New Record</span>
