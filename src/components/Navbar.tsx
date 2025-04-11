@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { ConnectWallet } from "./ui/buttons/ConnectWallet";
 import { AccountDropdown } from "./ui/buttons/AccountDropdown";
 import { Cross as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -15,9 +15,18 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   return (
-    <div className="absolute w-full">
-      <header className="w-full bg-[#1b1b1b] h-[150px] flex items-center justify-center">
+    <div className="absolute w-full z-10">
+      <header
+        className={`w-full bg-[#1b1b1b] h-[150px] flex items-center justify-center  border-b-[#2d2d2d] ${
+          isMenuOpen ? "border-b" : "border-0"
+        }`}
+      >
         <nav className="flex items-center justify-between max-w-[1270px] mx-auto px-5 md:pr-[3rem] w-full">
           <h1 className="font-[700] text-[40px] logo-gradient cursor-pointer">
             <Link href="/">Bitcann</Link>
@@ -69,13 +78,27 @@ export default function Navbar() {
       </header>
 
       {isMenuOpen && (
-        <div className="px-5 text-white bg-white w-full "  style={{ height: 'calc(100vh - 150px)' }}>
-          <ul className="text-center">
-            <li className="border-b pb-[1rem]">
-              <Link href="/auction">Auction</Link>
-            </li>
+        <div
+          className="px-5 text-white bg-[#1b1b1b]  w-full flex flex-col  items-center pb-5"
+          style={{ height: "calc(100vh - 150px)" }}
+        >
+          <ul className="text-center w-full">
+            <Link className="" href="/auction">
+              <li className="border-b  border-b-[#2d2d2d] cursor-pointer py-[1rem] hover:bg-[#666666] duration-100 ease-out font-semibold tracking-widest">
+                Auction
+              </li>
+            </Link>
+            <Link href="/profile">
+              <li className=" py-[1rem] hover:bg-[#666666] cursor-pointer duration-100 ease-out font-semibold tracking-widest">
+                Profile
+              </li>
+            </Link>
             <li className="py-[1rem]">
-              <Link href="/profile">Profile</Link>
+              {isConnected ? (
+                <AccountDropdown />
+              ) : (
+                <ConnectWallet text="Connect Wallet" />
+              )}
             </li>
           </ul>
         </div>
