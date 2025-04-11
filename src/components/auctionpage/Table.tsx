@@ -25,7 +25,7 @@ export const Table = () => {
   ];
 
   return (
-    <div className="rounded-[20px] overflow-hidden overflow-x-scroll">
+    <div className="rounded-[20px]  overflow-hidden overflow-x-auto">
       {/* Header */}
       <div className="grid grid-cols-4 bg-[#555555] py-[1.2rem] px-[1.5rem] text-center items-center min-w-[650px] overflow-auto">
         {tableTitle.map((title, index) => (

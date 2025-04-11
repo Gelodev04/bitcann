@@ -13,16 +13,18 @@ export const Profile = () => {
      
       <div className="w-full bg-[#272727] rounded-[20px] border-[#444] border">
         {profileDetails.map((detail, index) => (
-          <div
-            key={index}
-            className="flex justify-between items-center py-[1rem] px-[5rem] border-b border-[#444] last:border-b-0"
-          >
-            <span className="text-[#C1C1C1] font-[400] text-[16px]">
-              {detail.label}
-            </span>
-            <span className="text-white font-[400] text-[16px]">
-              {detail.value}
-            </span>
+          <div  key={index} className="border-b border-[#444] last:border-b-0">
+            <div
+             
+              className="flex justify-between items-center py-[1rem]  px-5  max-w-[750px] mx-auto "
+            >
+              <span className="text-[#C1C1C1] font-[400] text-[16px]">
+                {detail.label}
+              </span>
+              <span className="text-white font-[400] text-[16px]">
+                {detail.value}
+              </span>
+            </div>
           </div>
         ))}
       </div>

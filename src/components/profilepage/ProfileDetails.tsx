@@ -13,17 +13,17 @@ export default function ProfileDetails() {
   return (
     <div className="w-full flex flex-col">
       {/* Tabs */}
-      <div className="border-b-[4px] border-[#666666] mb-[5rem] flex justify-between items-center">
+      <div className="border-b-[4px] border-[#666666] mb-[5rem] flex justify-between items-center flex-col-reverse gap-2 sm:flex-row">
         <div className="inline-flex bg-[#333333] rounded-t-[5px]">
           {tabs.map((tab, index) => (
             <div
               key={index}
               onClick={() => setActiveTab(tab)}
-              className={`text-white hover:bg-[#666666] py-[7px] rounded-t-[5px]  cursor-pointer     ${
+              className={`text-white hover:bg-[#666666] py-[7px] rounded-t-[5px]  cursor-pointer w-[100px]   text-[15px]  text-center ${
                 activeTab === tab ? "bg-[#666666]" : ""
               }`}
             >
-              <button className="cursor-pointer  px-[2.5rem] ">{tab}</button>
+             {tab}
             </div>
           ))}
         </div>
