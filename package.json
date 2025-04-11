@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@leenguyen/react-flip-clock-countdown": "^1.6.1",
-    "@rumess/react-flip-countdown": "^1.2.6",
     "hamburger-react": "^2.5.2",
     "next": "15.2.5",
     "react": "^19.0.0",
