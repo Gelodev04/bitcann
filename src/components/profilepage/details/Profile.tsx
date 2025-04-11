@@ -11,9 +11,9 @@ export const Profile = () => {
   return (
   
      
-      <div className="w-full bg-[#272727] rounded-[20px] border-[#444] border">
+      <div className="w-full bg-[#272727] rounded-[20px] border-[#444] border overflow-x-auto">
         {profileDetails.map((detail, index) => (
-          <div  key={index} className="border-b border-[#444] last:border-b-0">
+          <div  key={index} className="border-b border-[#444] last:border-b-0  min-w-[500px]">
             <div
              
               className="flex justify-between items-center py-[1rem]  px-5  max-w-[750px] mx-auto "

@@ -51,7 +51,7 @@ export const Records = () => {
         {recordsDetails.map((item, index) => (
           <div
             key={index}
-            className=" py-[1rem] border-b border-[#444] last:border-0  text-white relative min-w-[700px] "
+            className=" py-[1rem] border-b border-[#444] last:border-0  text-white relative min-w-[600px] "
           >
             <div className="max-w-[800px]  px-[3.2rem]  mx-auto flex justify-between items-center ">
               <span className="opacity-70">{item.label}</span>
@@ -74,7 +74,7 @@ export const Records = () => {
         ))}
 
         {/* Add New Record Button */}
-        <div className="w-full max-w-[800px] mx-auto px-[3.2rem] overflow-x-auto min-w-[700px]">
+        <div className="w-full max-w-[800px] mx-auto px-[3.2rem] overflow-x-auto min-w-[600px]">
           {isEditing ? (
             // Show input when editing
             <div className="flex items-center justify-between gap-2  py-3 text-white  w-full ">

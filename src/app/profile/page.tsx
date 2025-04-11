@@ -6,6 +6,8 @@ import Image from "next/image";
 import React from "react";
 
 export default function ProfilePage() {
+ 
+
   return (
     <main className="flex flex-col items-center w-full justify-center max-w-[900px] mx-auto pt-[2rem] min-h-screen px-5">
       {/* Header */}
