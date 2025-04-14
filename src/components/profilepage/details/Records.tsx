@@ -99,9 +99,9 @@ export const Records = () => {
             // Show Add New Record button when not editing
             <div
               onClick={handleEditClick}
-              className="flex items-center gap-2  py-3 text-white hover:bg-[#333] cursor-pointer   w-full  "
+              className="flex items-center gap-2  py-3 text-white  cursor-pointer   w-full  group"
             >
-              <button className="p-3 rounded-full flex items-center justify-center bg-[#555555]">
+              <button className="p-3 rounded-full flex items-center justify-center bg-[#555555] group-hover:bg-[#333] cursor-pointer duration-100 ease-out">
                 <Add />
               </button>
               <span>Add New Record</span>
