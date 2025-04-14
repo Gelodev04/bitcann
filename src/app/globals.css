@@ -5,7 +5,7 @@
   font-family: 'Product Sans';
   font-style: normal;
   font-weight: normal;
-  src: local('Product Sans'), url('/fonts/product-sans/ProductSans-Regular.woff') format('woff');
+  src: local('Product Sans'), url('/fonts/product-sans/ProductSans-Regular.ttf') format('truetype');
   }
 
 
