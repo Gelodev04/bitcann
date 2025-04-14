@@ -93,7 +93,7 @@ export const Records = () => {
           {isEditing ? (
             // Show input when editing
             <div className="flex items-center justify-between gap-2  py-3 text-white  w-full ">
-              <select className="w-full bg-[#333333] rounded-[8px] px-4 py-1 text-[hsl(0,0%,90%)] focus:outline-none focus:ring-2 focus:ring-[#27A1FA] ">
+              <select className="w-full bg-[#333333] rounded-[8px] px-4  py-1 text-[hsl(0,0%,90%)] focus:outline-none focus:ring-2 focus:ring-[#27A1FA] ">
                 <option value=""></option>
                 {dropdownOptions.map((option, index) => (
                   <option className="text-sm " key={index} value={option.value}>
