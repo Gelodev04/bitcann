@@ -19,7 +19,7 @@ export default function ProfileDetails() {
             <div
               key={index}
               onClick={() => setActiveTab(tab)}
-              className={`text-white hover:bg-[#666666] py-[7px] rounded-t-[5px]  cursor-pointer w-[100px]   text-[15px]  text-center ${
+              className={`text-white hover:bg-[#666666]  py-[7px] rounded-t-[5px]  cursor-pointer md:w-[130px] w-[100px]  text-[15px]  text-center ${
                 activeTab === tab ? "bg-[#666666]" : ""
               }`}
             >
