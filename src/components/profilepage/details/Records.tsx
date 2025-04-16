@@ -3,6 +3,7 @@ import { Add } from "@/components/svg/Add";
 import { Check } from "@/components/svg/Check";
 import { Delete } from "@/components/svg/Delete";
 import { Edit } from "@/components/ui/buttons/Edit";
+import RecordDropdown from "@/components/ui/dropdown/RecordDropdown";
 import Image from "next/image";
 import React from "react";
 import { useState, useRef, useEffect } from "react";
@@ -16,18 +17,7 @@ export const Records = () => {
     { label: "Running Bid", value: "0.01 BCH" },
   ];
 
-  const dropdownOptions = [
-    { label: "BTC Address", value: "BTC Address" },
-    { label: "ETH Address", value: "ETH Address" },
-    { label: "X", value: "Owner" },
-    { label: "Facebook", value: "Facebook" },
-    { label: "Instagram", value: "Instagram" },
-    { label: "Website", value: "Website" },
-    { label: "Blog", value: "Blog" },
-    { label: "Reddit", value: "Reddit" },
-    { label: "Youtube", value: "Youtube" },
-    { label: "Snapchat", value: "Snapchat" },
-  ];
+  
 
   const handleEditClick = () => {
     setIsEditing((prev) => !prev);
@@ -69,11 +59,11 @@ export const Records = () => {
             <div className="max-w-[750px]  px-5 mx-auto flex justify-between items-center ">
               <span className="opacity-70">{item.label}</span>
               <div className="flex items-center gap-2">
-                <span className="text-[#27A1FA] font-semibold">
+                <span className="text-[#27A1FA] font-semibold ">
                   {item.value}
                 </span>
                 {isEditing && (
-                  <button className=" bg-[#555555] p-1 rounded-[5px]">
+                  <button className=" bg-[#555555] p-1 rounded-[5px] shake-bottom">
                     <Image
                       src="/svg/delete.svg"
                       alt="delete"
@@ -93,24 +83,17 @@ export const Records = () => {
           {isEditing ? (
             // Show input when editing
             <div className="flex items-center justify-between gap-2  py-3 text-white  w-full ">
-              <select className="w-full bg-[#333333] rounded-[8px]  px-4  py-1 text-[hsl(0,0%,90%)] focus:outline-none focus:ring-2 focus:ring-[#27A1FA] ">
-                <option value=""></option>
-                {dropdownOptions.map((option, index) => (
-                  <option className="text-sm " key={index} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
+              <RecordDropdown/>
 
               <input
                 type="text"
-                className="w-full bg-[#333333] rounded-[8px] px-4 py-1 text-white focus:outline-none focus:ring-2 focus:ring-[#27A1FA]"
+                className="w-full bg-[#333333] rounded-[8px] px-4 py-1 text-white focus:outline-none  h-[36px]"
               />
               <div className="flex gap-2">
                 <button className="bg-[#328F3F] p-1 rounded-[5px]  cursor-pointer right-0">
                   <Check />
                 </button>
-                <button className="  bg-[#555555] p-1 rounded-[5px] cursor-pointer">
+                <button className="  bg-[#555555] p-1 rounded-[5px] cursor-pointer shake-bottom">
                   <Delete />
                 </button>
               </div>

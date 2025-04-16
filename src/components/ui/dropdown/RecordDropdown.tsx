@@ -1,20 +1,45 @@
+import * as React from "react"
 
-import Dropdown from 'react-bootstrap/Dropdown';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
-function RecordDropdown() {
+
+
+export default function RecordDropdown() {
+
+  const dropdownOptions = [
+      { label: "BTC Address", value: "BTC Address" },
+      { label: "ETH Address", value: "ETH Address" },
+      { label: "X", value: "Owner" },
+      { label: "Facebook", value: "Facebook" },
+      { label: "Instagram", value: "Instagram" },
+      { label: "Website", value: "Website" },
+      { label: "Blog", value: "Blog" },
+      { label: "Reddit", value: "Reddit" },
+      { label: "Youtube", value: "Youtube" },
+      { label: "Snapchat", value: "Snapchat" },
+    ];
+
   return (
-    <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic" className=''>
-        Dropdown Button
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-  );
+    <Select >
+      <SelectTrigger className="w-full outline-0 border-0 bg-[#333333] ">
+        <SelectValue placeholder="" />
+      </SelectTrigger>
+      <SelectContent className="bg-[#313131] outline-0 border border-[#444]">
+        <SelectGroup className="">
+          <SelectLabel></SelectLabel>
+          {dropdownOptions.map((option, index) => (
+            <SelectItem className="data-[highlighted]:bg-[#666666] data-[highlighted]:text-white text-white" key={index} value={option.value}>{option.label}</SelectItem>
+          ))}
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+  )
 }
-
-export default RecordDropdown;
